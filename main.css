@@ -1,3 +1,7 @@
+html{
+	scroll-behavior: smooth; /*Le 'scrolling' devient smooth en utilisant les anchor de la navbar*/
+}
+
 body {
 	margin: 0px;
 	padding: 0px;
@@ -398,7 +402,7 @@ footer {
 
 }
 
-footer p, a {
+footer p, footer a {
 	display: inline-flex;
 	transform: rotate(-1deg);	
 	font-size: 13px;
