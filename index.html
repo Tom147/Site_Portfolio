@@ -3,30 +3,63 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="author" content="Tom BACON">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="https://kit.fontawesome.com/72050f4fcb.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.ico" />
 	<title>Tom BACON</title>
 </head>
 <body>
-	<header>
-		<div>
+	<nav>
+		<div class="logo">
 			<a href="#accueil_Page" id="left"><img src="img/logoFinal.png" id="logo"></a>
 		</div>
-		<nav>
-				<a href="#competence_Page" class="right">Compétences &nbsp;<i class="fas fa-desktop"></i></a>
-				<a href="#portfolio_Page" class="right">Portfolio &nbsp;<i class="fas fa-code"></i></a>
-				<a href="#contact_Page" class="right">Contact &nbsp;<i class="fas fa-phone"></i></a>
-		</nav>
-	</header>
+		<ul class="nav-links">
+			<li><a href="#competence_Page">Compétences  &nbsp;<i class="fas fa-desktop"></i></a></li>
+			<li><a href="#portfolio_Page">Portfolio &nbsp;<i class="fas fa-code"></i></a></li>
+			<li><a href="#contact_Page">Contact &nbsp;<i class="fas fa-phone"></i></a></li>
+		</ul>
+		<div class="burger">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+	</nav>
+
+	<script type="text/javascript">
+		const navSlide = () => {
+			const burger = document.querySelector('.burger');
+			const nav = document.querySelector('.nav-links');
+			const navLinks = document.querySelectorAll('.nav-links li')
+			
+			burger.addEventListener('click',()=>{
+
+				//toggle nav
+				nav.classList.toggle('nav-active');
+
+			//Animate Links
+			navLinks.forEach((link, index) => {
+				if(link.style.animation) {
+					link.style.animation = '';
+				} else {
+					link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 +0.5}s`;
+				}
+			});
+		});
+	}
+
+		navSlide();
+	</script>
 <!----------------------------------------------------------------------------------------------------->
 <!--                                  <ACCEUIL>													     -->
 <!----------------------------------------------------------------------------------------------------->
 	<section id=accueil_Page>
 		<div id="info">
-			<h1>Developpeur&nbsp; <span> front-end</span></h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-			<button><a href="doc/CV_BACON-Tom.pdf"> Télécharger mon C.V &nbsp;<i class="fas fa-download"></i></a></button>
+			<h1>Developpeur&nbsp; <span> front-end</span></h1> </br>
+			<p>Bonjour a vous ! Je m'appelle Tom, et suis en première année d'informatique a l'IMIE de Rennes dans le but d'obtenir le diplôme de concepteur et développeur d'application. Pour cela, je recherche une alternance sur une période de deux ans.</p>
+			<button><a href="doc/CV_BACON-Tom.pdf" target="blank"> Télécharger mon C.V &nbsp;<i class="fas fa-download"></i></a></button>
 		</div>
 		<div id="arrowIcon">
 			<a href="#competence_Page" id="arrowDown"><i class="fas fa-angle-double-down fa-3x"></i></a>
@@ -44,7 +77,7 @@
 		
 		<div class="ulliRow">
 			<article id="languages">
-				<h3>Languages</h3>
+				<h3>Langages</h3></br>
 				<ul>
 					<li><span>HTML</span></li>
 					<li><span>CSS</span></li>
@@ -56,7 +89,7 @@
 			</article>
 
 			<article id="logiciel">
-				<h3>Logiciel</h3>
+				<h3>Logiciel</h3></br>
 				<ul>
 					<li><span>Figma</span></li>
 					<li><span>Adobe XD</span></li>
@@ -67,7 +100,7 @@
 			</article>
 
 			<article id="framework">
-				<h3>Framework</h3>
+				<h3>Framework</h3></br>
 					<ul>
 					<li><span>Bulma</span></li>
 					<li><span>Bootstrap</span></li>
@@ -97,7 +130,7 @@
 			<article id="projet1">
 				<img src="img/projet1.png">
 				<div class="infoProjet">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Ce site est une maquette que j'ai pu intégrer parmis d'autres dans le cadre de ma formation en première année d'informatique 💻 au sein de l'IMIE de Rennes</p>
 					<div class="btnProjet">
 						<button class="voirBtn">Voir</button>
 						<button class="avisBtn">Avis</button>
@@ -108,7 +141,7 @@
 			<article id="projet2">
 				<img src="img/projet2.png">
 				<div class="infoProjet">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+					<p>Ceci est une maquette réalisé à partir d'un projet pour un étudiant en première année d'école de commerce, l'application reprend le principe de Blablacar 🚗, mais est destiné aux personnes rentrant de soirée 🍺 et cherchant quelqu'un pour les raccompagné.</p>
 					<div class="btnProjet">
 						<button class="voirBtn">Voir</button>
 						<button class="avisBtn">Avis</button>
@@ -119,8 +152,7 @@
 			<article id="projet3">
 				<img src="img/projet3.png">
 				<div class="infoProjet">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </p>
+					<p>Pratiquant le Taï-Jitsu Do (discipline martial 🥋) depuis plusieurs années, j'ai voulu repensé le site officiel du Taï-Jitsu Do. J'ai donc réalisé cette maquette en prenant en compte le contenu déjà présent. </p>
 					<div class="btnProjet">
 						<button class="voirBtn">Voir</button>
 						<button class="avisBtn">Avis</button>
@@ -145,11 +177,13 @@
 			<button type="submit">Envoyez</button>
 		</form>
 		<div id="infoLink">
-			<i class="fab fa-github fa-2x"></i>
-			<i class="fab fa-linkedin fa-2x"></i>
+			<a href="https://github.com/Tom147" target="blank" class="a-rs"><i class="fab fa-github fa-2x"></i></a>
+			<a href="https://www.linkedin.com/in/tom-bacon-8081711a0/" target="blank" class="a-rs"><i class="fab fa-linkedin fa-2x"></i></a>
 		</div>
 			<p>tombacon.pro@gmail.com</p>
 	</section>
+
+	<!--<script type=text/javascript> var name = "dupont" ; var domain = "spam.com" ; var subject = "subject=Anti spam" ; document.write('<a href="mailto:' + name + '@' + domain + ' ?' + subject + '">') ; document.write(name + '@' + domain + '</a>') ;</script>-->
 <!----------------------------------------------------------------------------------------------------->
 <!--                                  </CONTACT>											     	 -->
 <!----------------------------------------------------------------------------------------------------->
