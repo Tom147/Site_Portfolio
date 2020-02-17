@@ -9,9 +9,6 @@ html{
 }
 
 body {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 	overflow-x: hidden;		/*cache le surplux causé par le background de la section compétence, et du footer de par la rotation*/
 }
@@ -482,8 +479,6 @@ footer {
 	color: white;
 	justify-content: space-around;
 	align-items: center;
-	transform: rotate(0.5deg);		/* Rotation du Background  de 0.5deg*/
-	z-index: 1;		  				/* place le footer (dont le background, devant les autres sections sur l'axe z*/
 	position: relative;		 		/* Met une position pour pouvoir utilisé z-index*/
 	overflow-y: hidden;				/* cache une partie de la rotation du footer sur l'axe y*/
 	margin-top: -10px;
@@ -492,8 +487,7 @@ footer {
 }
 
 footer p,footer a {
-	display: inline-flex;
-	transform: rotate(-1deg);	
+	display: inline-flex;	
 	font-size: 13px;
 	padding: 10px 0px;
 }
@@ -501,7 +495,6 @@ footer p,footer a {
 footer a {
 	color: white;
 	text-decoration: none;
-	transform: rotate(-0.5deg);
 	font-size: 13px;
 	text-transform: uppercase;
 }
@@ -517,7 +510,39 @@ footer a {
 		padding: 15px 10px;
 	}
 
-	#projet1, #projet2, #projet3 {
-	flex-wrap: wrap;
 }
+
+@media screen and (max-width: 1000px){
+
+	#projet1, #projet2, #projet3 {
+		flex-wrap: wrap;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#projet1 img, #projet2 img, #projet3 img {
+		width: 60%;
+	}
+
+		#projet1 p, #projet2 p, #projet3 p {
+			font-size: 15px;
+	}
+
+	#projets{
+		display: flex; 
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#projet1, #projet3 {
+		float: none;
+		margin-left: 0px;
+	}
+
+	#projet2 {
+		float: none;
+		margin-right: 0px;
+	}
+
 }
