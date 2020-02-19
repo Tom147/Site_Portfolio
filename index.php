@@ -137,7 +137,7 @@
 					<p>Ce site est une maquette que j'ai pu intégrer parmis d'autres dans le cadre de ma formation en première année d'informatique 💻 au sein de l'IMIE de Rennes</p>
 					<div class="btnProjet">
 						<a href="https://github.com/Tom147/int-gration-imie" target="blank"><button class="voirBtn">Voir</button></a>
-						<button class="avisBtn">Avis</button>
+						<a href="php/commentaire.php?id=1" target="blank"><button class="avisBtn">Avis</button></a>
 					</div>
 				</div>
 			</article>
@@ -147,8 +147,8 @@
 				<div class="infoProjet">
 					<p>Ceci est une maquette réalisé à partir d'un projet pour un étudiant en première année d'école de commerce, l'application reprend le principe de Blablacar 🚗, mais est destiné aux personnes rentrant de soirée 🍺 et cherchant quelqu'un pour les raccompagné.</p>
 					<div class="btnProjet">
-						<a href="#"><button class="voirBtn">Voir</button></a>
-						<button class="avisBtn">Avis</button>
+						<a href="https://github.com/Tom147/covo-night" target="blank"><button class="voirBtn">Voir</button></a>
+						<a href="php/commentaire.php?id=2" target="blank"><button class="avisBtn">Avis</button></a>
 					</div>
 				</div>
 			</article>
@@ -156,10 +156,10 @@
 			<article id="projet3">
 				<img src="img/projet3.png" alt="maquette tai jitsu do" title="tai jitsu do">
 				<div class="infoProjet">
-					<p>Pratiquant le Tai Jitsu Do (Discipline martial), j'ai voulu repensé le site web officiel de cette discipline</p>
+					<p>Pratiquant le Tai Jitsu Do (Discipline martial 🥋), j'ai voulu repensé le site web officiel de cette discipline</p>
 					<div class="btnProjet">
-						<a href="#"><button class="voirBtn">Voir</button></a>
-						<button class="avisBtn">Avis</button>
+						<a href="https://github.com/Tom147/TJD" target="blank"><button class="voirBtn">Voir</button></a>
+						<a href="php/commentaire.php?id=3" target="blank"><button class="avisBtn">Avis</button></a>
 					</div>
 				</div>
 			</article>
@@ -188,7 +188,7 @@
 			    <input name="email" type="text" value="" size="30" id="email" placeholder="email" /><br>
 			    
 			    <textarea name="message" rows="7" cols="30" id="Commentaire" placeholder="Message"></textarea><br>
-			    <input type="submit" value="Send email" id="sendbtn" />
+			    <input type="submit" value="Envoyer" id="sendbtn" />
 			    </form>
 			    <?php
 			    } 
@@ -208,7 +208,7 @@
 					echo "Email envoyé";
 				    }
 			    }  
-?>
+		?>
 
 
 		<div id="infoLink">
@@ -217,8 +217,6 @@
 		</div>
 			<p>tombacon.pro@gmail.com</p>
 	</section>
-
-	<!--<script type=text/javascript> var name = "dupont" ; var domain = "spam.com" ; var subject = "subject=Anti spam" ; document.write('<a href="mailto:' + name + '@' + domain + ' ?' + subject + '">') ; document.write(name + '@' + domain + '</a>') ;</script>-->
 <!----------------------------------------------------------------------------------------------------->
 <!--                                  </CONTACT>											     	 -->
 <!----------------------------------------------------------------------------------------------------->
