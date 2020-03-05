@@ -15,8 +15,9 @@
 	</nav>
 
 <?php
+include 'credential.php';
 
-$bdd = new PDO('mysql:host=pj61y.myd.infomaniak.com;dbname=pj61y_espace_commentaires;charset=utf8','pj61y_tb14w',''); //connexion bdd
+$bdd = new PDO($db,$log,$pwd); //connexion bdd
 
 if (isset($_GET['id']) AND !empty($_GET['id'])) {
 	$getid = htmlspecialchars($_GET['id']); 
