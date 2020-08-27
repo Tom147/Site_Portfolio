@@ -227,11 +227,14 @@ nav{
 	margin-top: 40px;
 	display: flex;
 	flex-direction: row;
-	width: 100%;
+	width: 90%;
 	justify-content: space-around;
 	transform: rotate(4deg);	/*"Annule" l'effet de la rotation engendrer par le background sur le contenu de la section*/
 	flex-wrap: wrap;
 	margin-left: 10px;
+}
+#competence_Page .ulliRow article {
+	margin: 10px 20px;
 }
 
 #competence_Page h3 {
@@ -440,7 +443,7 @@ form {
 	align-items: center;
 }
 
-#sendbtn {
+#contact_Page #sendbtn {
 	width: 130px;
 	padding: 5px 0px;
 	font-size: 12px;
@@ -502,16 +505,6 @@ footer a {
 /*						 				*/
 /*					</FOOTER   	  		*/
 /*						 				*/
-
-
-@media screen and (max-width: 800px){
-		#accueil_Page #info {
-		width: 60%;
-		padding: 15px 10px;
-	}
-
-}
-
 @media screen and (max-width: 1000px){
 
 	#projet1, #projet2, #projet3 {
@@ -543,6 +536,20 @@ footer a {
 	#projet2 {
 		float: none;
 		margin-right: 0px;
+	}
+
+}
+
+@media screen and (max-width: 800px){
+		#accueil_Page #info {
+		width: 60%;
+		padding: 15px 10px;
+	}
+
+}
+
+@media screen and (max-width: 400px){
+		
 	}
 
 }
